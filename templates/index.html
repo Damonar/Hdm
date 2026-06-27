@@ -61,8 +61,28 @@
               <label class="block text-xs text-gray-500 mb-1">LLM Model</label>
               <input type="text" class="w-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
                      :value="vars.LLM_MODEL || ''" @input="vars.LLM_MODEL = $event.target.value"
-                     placeholder="anthropic/claude-opus-4.6">
-              <p class="text-xs text-gray-400 mt-1">OpenRouter format: provider/model (e.g. anthropic/claude-opus-4.6, openai/gpt-4o, google/gemini-3-flash-preview)</p>
+                     placeholder="openai/mimo-v2.5-free">
+              <p class="text-xs text-gray-400 mt-1">Format: provider/model (e.g. openai/mimo-v2.5-free, openai/gpt-4o, google/gemini-3-flash-preview)</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold mb-3">Custom Provider (Nararouter)</h2>
+          <div class="bg-white border border-gray-200 dark:bg-gray-900 dark:border-gray-800 rounded-xl p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs text-gray-500 mb-1">Base URL</label>
+                <input type="text" class="w-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                       :value="vars.OPENAI_BASE_URL || ''" @input="vars.OPENAI_BASE_URL = $event.target.value"
+                       placeholder="https://router.bynara.id/v1">
+              </div>
+              <div>
+                <label class="block text-xs text-gray-500 mb-1">API Key</label>
+                <input type="password" class="w-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                       :value="vars.OPENAI_API_KEY || ''" @input="vars.OPENAI_API_KEY = $event.target.value"
+                       placeholder="Enter API key from nararouter">
+              </div>
             </div>
           </div>
         </section>
