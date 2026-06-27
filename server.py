@@ -45,6 +45,9 @@ CODE_TTL_SECONDS = 3600
 ENV_VAR_DEFS = [
     # Model
     ("LLM_MODEL", "Model", "model", False),
+    # Custom Provider (Nararouter / OpenAI Compatible)
+    ("OPENAI_API_KEY", "Nararouter API Key", "provider", True),
+    ("OPENAI_BASE_URL", "Nararouter Base URL", "provider", False),
     # Providers
     ("OPENROUTER_API_KEY", "OpenRouter API Key", "provider", True),
     ("DEEPSEEK_API_KEY", "DeepSeek API Key", "provider", True),
